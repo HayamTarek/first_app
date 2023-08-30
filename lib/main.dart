@@ -15,9 +15,9 @@ void main() {
         child: Column(
           children: [
             const Text("hi hayam"),
-            ElevatedButton(onPressed: () {}, child: Text("press 1")),
-            ElevatedButton(onPressed: () {}, child: Text("press 2")),
-            ElevatedButton(onPressed: () {}, child: Text("press 3")),
+            ElevatedButton(onPressed: () {}, child: const Text("press 1")),
+            ElevatedButton(onPressed: () {}, child: const Text("press 2")),
+            ElevatedButton(onPressed: () {}, child: const Text("press 3")),
           ],
         ),
       ),
