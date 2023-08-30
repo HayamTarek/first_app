@@ -4,7 +4,25 @@ void main() {
   //runApp(const MyApp());
 
   runApp(MaterialApp(
-    home: Text("Hayam"),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('First app'),
+        backgroundColor: Colors.pinkAccent,
+        centerTitle: true,
+      ),
+      drawer: const Text("menu"),
+      body: Center(
+        child: Column(
+          children: [
+            const Text("hi hayam"),
+            ElevatedButton(onPressed: () {}, child: Text("press 1")),
+            ElevatedButton(onPressed: () {}, child: Text("press 2")),
+            ElevatedButton(onPressed: () {}, child: Text("press 3")),
+          ],
+        ),
+      ),
+    ),
+    debugShowCheckedModeBanner: false, //Removing Debug Banner
   ));
 }
 
