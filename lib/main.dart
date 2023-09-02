@@ -15,22 +15,28 @@ void main() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "user name",
-              selectionColor: Colors.pinkAccent,
-              textAlign: TextAlign.left,
-            ),
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: const [
+              Text(
+                " User name",
+                selectionColor: Colors.pinkAccent,
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 15),
+              ),
+            ]),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter a user name',
               ),
             ),
-            const Text(
-              "password",
-              selectionColor: Colors.pinkAccent,
-              textAlign: TextAlign.left,
-            ),
+            Row(mainAxisAlignment: MainAxisAlignment.start, children: const [
+              Text(
+                " Password",
+                selectionColor: Colors.pinkAccent,
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 15),
+              ),
+            ]),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
