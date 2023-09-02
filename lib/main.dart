@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: const Text('login'),
+        title: const Text('cv app'),
         backgroundColor: Colors.pinkAccent,
         centerTitle: true,
       ),
@@ -15,9 +15,14 @@ void main() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80'),
+              radius: 100,
+            ),
             Row(mainAxisAlignment: MainAxisAlignment.start, children: const [
               Text(
-                " User name",
+                " Name",
                 selectionColor: Colors.pinkAccent,
                 textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 15),
@@ -26,12 +31,12 @@ void main() {
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter a user name',
+                hintText: 'Enter your name',
               ),
             ),
             Row(mainAxisAlignment: MainAxisAlignment.start, children: const [
               Text(
-                " Password",
+                " Phone",
                 selectionColor: Colors.pinkAccent,
                 textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 15),
@@ -40,7 +45,7 @@ void main() {
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter a password',
+                hintText: 'Enter your number',
               ),
             ),
             ElevatedButton(
@@ -48,7 +53,7 @@ void main() {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.pinkAccent),
               ),
-              child: const Text("log in"),
+              child: const Text("Call me"),
             )
           ],
         ),
