@@ -6,18 +6,44 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: const Text('First app'),
+        title: const Text('login'),
         backgroundColor: Colors.pinkAccent,
         centerTitle: true,
       ),
-      drawer: const Text("menu"),
+      drawer: const Text(""),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("hi hayam"),
-            ElevatedButton(onPressed: () {}, child: const Text("press 1")),
-            ElevatedButton(onPressed: () {}, child: const Text("press 2")),
-            ElevatedButton(onPressed: () {}, child: const Text("press 3")),
+            const Text(
+              "user name",
+              selectionColor: Colors.pinkAccent,
+              textAlign: TextAlign.left,
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter a user name',
+              ),
+            ),
+            const Text(
+              "password",
+              selectionColor: Colors.pinkAccent,
+              textAlign: TextAlign.left,
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter a password',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.pinkAccent),
+              ),
+              child: const Text("log in"),
+            )
           ],
         ),
       ),
